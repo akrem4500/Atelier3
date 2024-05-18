@@ -38,4 +38,35 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
+
+function isEven(number) {
+  return number % 2 === 0;
+}
+
+// Méthode pour vérifier si un nombre est impair
+function isOdd(number) {
+  return number % 2 !== 0;
+}
+
+// Méthode pour calculer la racine carrée d'un nombre
+function calculateSquareRoot(number) {
+  if (number < 0) {
+    throw new Error('Le nombre doit être positif.');
+  }
+  return Math.sqrt(number);
+}
+
+// Exemple d'utilisation des méthodes
+const num1 = 10;
+const num2 = 7;
+const num3 = 16;
+
+console.log(`Le nombre ${num1} est-il pair ?`, isEven(num1)); // Output: Le nombre 10 est-il pair ? true
+console.log(`Le nombre ${num1} est-il impair ?`, isOdd(num1)); // Output: Le nombre 10 est-il impair ? false
+
+console.log(`Le nombre ${num2} est-il pair ?`, isEven(num2)); // Output: Le nombre 7 est-il pair ? false
+console.log(`Le nombre ${num2} est-il impair ?`, isOdd(num2)); // Output: Le nombre 7 est-il impair ? true
+
+console.log(`La racine carrée de ${num3} est :`, calculateSquareRoot(num3)); // Output: La racine carrée de 16 est : 4
+
 module.exports = app;
