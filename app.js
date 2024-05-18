@@ -38,8 +38,9 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-console.log("modifications dans rzg")
+console.log("des modifications dans rzg");
 
+console.log("des modifications dans main");
 function isEven(number) {
   return number % 2 === 0;
 }
